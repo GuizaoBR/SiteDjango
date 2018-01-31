@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <!--Import Google Icon Font-->
+    <!--Import materialize.css-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="../static/css/materialize.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/style.css"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body>
+      <header>
+          <!-- Dropdown Structure -->
+          <!-- Dropdown dektop redes sociais -->
+         <ul id="redesocial" class="dropdown-content">
+            <li><a href="https://facebook.com/guilherme.germanosilva" target="_blank">Facebook</a></li>
+            <li class="divider"></li>
+            <li><a href="https://plus.google.com/u/1/+GuilhermeGermanoSilva" target="_blank">Google+</a></li>
+            <li class="divider"></li>
+            <li><a href="http://telegram.me/GuizaoTech" target="_blank">Telegram</a></li>
+        </ul>
+          <!-- Dropdown desktop projetos -->
+        <ul id="projetos" class="dropdown-content ">
+           <li><a href="https://sites.google.com/view/pdrq/p%C3%A1gina-inicial" target="_blank">Android/Roms</a></li>
+           <li class="divider"></li>
+           <li><a href="http://www.asoft.com.br/" target="_blank">Asoft</a></li>
+           <li class="divider"></li>
+           <li><a href="https://github.com/GuizaoBR" target="_blank">GitHub</a></li>
+       </ul>
+        <nav>
+          <div class="nav-wrapper blue darken-4">
+            <a href="{% url 'index' %}" class="brand-logo">Guilherme</a>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="{% url 'contato' %}">Contato</a></li>
+              <li><a class="waves-effect" href="{% url 'conhecimentos' %}">Conhecimentos</a></li>
+              <li><a data-belowOrigin="true" class="dropdown-button" href="#!" data-activates="redesocial">Redes Sociais<i class="material-icons right">arrow_drop_down</i></a></li>
+              <li><a data-belowOrigin="true" class="dropdown-button" href="#!" data-activates="projetos">Projetos<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      
+      
+      <!--Nav mobile-->
+      <ul id="slide-out" class="side-nav  blue lighten-2">
+        <li><a class="waves-effect" href="{% url 'index' %}">Home</a></li>
+        <li><a class="waves-effect" href="{% url 'contato' %}">Contato</a></li>
+        <li><a class="waves-effect" href="{% url 'conhecimentos' %}">Conhecimentos</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion ">
+            <li>
+              <a class="collapsible-header waves-effect">Redes Sociais<i class="material-icons right">arrow_drop_down</i></a>
+              <div class="collapsible-body">
+                <ul class="blue darken-1">
+                  <li><a class="waves-effect" href="https://facebook.com/guilherme.germanosilva" target="_blank">Facebook</a></li>
+                  <li><a class="waves-effect" href="https://plus.google.com/u/1/+GuilhermeGermanoSilva" target="_blank">Google+</a></li>
+                  <li><a class="waves-effect" href="http://telegram.me/GuizaoTech" target="_blank">Telegram</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="collapsible-header waves-effect">Projetos<i class="material-icons right">arrow_drop_down</i></a>
+              <div class="collapsible-body">
+                <ul class="blue darken-1">
+                  <li><a class="waves-effect" href="https://sites.google.com/view/pdrq/p%C3%A1gina-inicial" target="_blank">Android/Roms</a></li>
+                  <li><a class="waves-effect" href="http://www.asoft.com.br/" target="_blank">Asoft</a></li>
+                  <li><a class="waves-effect" href="https://github.com/GuizaoBR" target="_blank">GitHub</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+<!--
+<ul class="right hide-on-med-and-down">
+<li><a href="#!">First Sidebar Link</a></li>
+<li><a href="#!">Second Sidebar Link</a></li>
+<li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+<ul id='dropdown1' class='dropdown-content'>
+  <li><a href="#!">First</a></li>
+  <li><a href="#!">Second</a></li>
+  <li><a href="#!">Third</a></li>
+  <li><a href="#!">Fourth</a></li>
+</ul>
+</ul>-->
+
+
+        {% block main %}
+
+
+
+
+        {% endblock %}
+
+        <footer class="page-footer blue darken-4">
+            <div class="container">
+              <div class="row">
+                <div class="col l6 s12">
+                  <h5 class="white-text">Telefone</h5>
+                  <p class="grey-text text-lighten-4">(11)9-8991-8652 Claro-SP</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                  <h5 class="white-text">Sobre</h5>
+                  <ul>
+                    <li>Mora em Itupeva</li>
+                    <li>Nasceu em S.B.C</li>
+                    <li>Estuda na Impacta</a></li>
+                    <li>Nasceu em 21/03/1999</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="footer-copyright  blue accent-4">
+              <div class="container">
+              © 2018 Copyright Text
+              </div>
+            </div>
+          </footer>
+    <!--JavaScript at end of body for optimized loading-->
+
+    <script type="text/javascript" src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+    <script type="text/javascript" src="../static/js/materialize.js"></script>
+    <script type="text/javascript" src="../static/js/init.js"></script>
+
+  </body>
+</html>

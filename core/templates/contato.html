@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<main>
+    <form method="POST">
+        {% csrf_token %}
+        
+        <div class="row">
+                <div class="input-field col s12 m6">
+                    {{contato.nome}}
+                    <label class="active" for="first_name2">Nome</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    {{contato.email}}
+                    <label for="email">Email</label>
+                    <span class="helper-text" data-error="wrong" data-success="right"></span>
+                </div>
+                <div class="input-field col s12 m6 ">
+                    {{contato.mensagem}}
+                    <label for="mensagem">Mensagem</label>
+                  </div>
+                  <button class='waves-effect waves-light btn btn-enviar col s5 offset-s3  m2' type="submit" >Enviar</button>
+
+            </div>
+       <!-- <div class="row">
+            <div class="input-field col s12 m6">
+                <input  id="first_name2" name='Nome' type="text" class="validate">
+                <label class="active" for="first_name2">First Name</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input id="email" name="email" type="email" class="validate">
+                <label for="email">Email</label>
+                <span class="helper-text" data-error="wrong" data-success="right"></span>
+            </div>
+            <div class="input-field col s12 m6">
+                <textarea id="textarea1" name="Mensagem" class="materialize-textarea"></textarea>
+                <label for="textarea1">Textarea</label>
+              </div>
+              <button class='waves-effect waves-light btn' type="submit">Enviar</button>
+        </div>-->
+
+    </form>
+</main>
+{% endblock %}
